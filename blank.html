@@ -1,0 +1,18 @@
+<html>
+    <script>
+    var droid = new Android();
+    droid.registerCallback("echo", function(compteur) {
+        document.getElementById("cpt").value = compteur.data;
+    });
+    droid.registerCallback("status", function(message) {
+        document.getElementById("st").innerHTML = message.data;
+    });
+    </script>
+    <body>
+        <h1>Nbr de points enregistres</h1>
+        <input type="text" name="boton" id="cpt" value="" />
+        <h2 id="st">Status application</h2>
+        
+    </body>
+</html>
+
